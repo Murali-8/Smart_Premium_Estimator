@@ -1,0 +1,7 @@
+streamlit
+pandas
+joblib
+scikit-learn
+xgboost
+mlflow
+streamlit-option-menu
