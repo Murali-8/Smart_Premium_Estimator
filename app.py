@@ -7,7 +7,7 @@ from streamlit_option_menu import option_menu
 # Load trained pipeline (if already saved), or initialize and fit manually
 #pipeline = SmartPremiumPipeline()
 
-train_df = pd.read_csv("/Users/muralidharanv/Documents/GUVI /PROJECTS/Smart Premium/DATA/playground-series-s4e12 (1)/train.csv",index_col=0)
+#train_df = pd.read_csv("/Users/muralidharanv/Documents/GUVI /PROJECTS/Smart Premium/DATA/playground-series-s4e12 (1)/train.csv",index_col=0)
 #XGB_model = joblib.load('/Users/muralidharanv/Documents/GUVI /PROJECTS/Smart Premium/saved_models/XGBoost_model.pkl') 
 Randomforest_model = joblib.load('saved_models/RandomForest_model.pkl') 
 
@@ -16,15 +16,12 @@ Randomforest_model = joblib.load('saved_models/RandomForest_model.pkl')
 
 # Streamlit UI
 st.set_page_config(layout="wide")
-#st.title("Smart Premium Estimator")
  
 with st.sidebar:
     selected = option_menu(
             "Menu",
             ["Home", "Premium Calculator"],
             icons=["house", "calculator"],
-            #menu_icon="cast",
-            #menu_icon="menu-hamburger",
             default_index=0,
         )
 
