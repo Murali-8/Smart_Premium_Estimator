@@ -13,7 +13,7 @@ import streamlit as st
 
 #train_df = pd.read_csv("/Users/muralidharanv/Documents/GUVI /PROJECTS/Smart Premium/DATA/playground-series-s4e12 (1)/train.csv",index_col=0)
 #XGB_model = joblib.load('/Users/muralidharanv/Documents/GUVI /PROJECTS/Smart Premium/saved_models/XGBoost_model.pkl') 
-Randomforest_model = joblib.load("saved_models/XGBoost_model.pkl")
+XGB_model = joblib.load("saved_models/XGBoost_model.pkl")
 
 
 #pipeline.fit(train_df, target_column = "Premium Amount", model_name="RandomForest", model_params={"max_depth": 20, "max_features": 'sqrt', "min_samples_leaf": 2, "min_samples_split": 2, "n_estimators": 200})
@@ -122,7 +122,7 @@ elif selected == "Premium Calculator":
 
 
         # Predict
-        prediction = Randomforest_model.predict(input_data)
+        prediction = XGB_model.predict(input_data)
         st.success(f"Estimated Premium Amount: ₹{round(float(prediction[0]), 2)}")
     
     elif Cancel:
