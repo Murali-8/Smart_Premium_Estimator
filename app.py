@@ -1,9 +1,10 @@
-import streamlit as st
 import pandas as pd
 import joblib
 from streamlit_option_menu import option_menu
 import os
 os.environ["STREAMLIT_WATCH_MODE"] = "poll"
+import streamlit as st
+
 
 #from Premium_pipeline import SmartPremiumPipeline  # your pipeline file
 
