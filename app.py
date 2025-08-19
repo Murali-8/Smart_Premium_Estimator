@@ -115,9 +115,9 @@ elif selected == "Premium Calculator":
             input_data['CreditScoreGroup'] = pd.cut(input_data['Credit Score'], bins=[300, 500, 650, 750, 850],
                                             labels=['Poor', 'Average', 'Good', 'Excellent'])
 
-        expected_columns = ['Age', 'Gender', 'Credit Score', 'Annual Income', 'Marital Status', 'Number of Dependents','Education Level',
-                            'Occupation','Health Score','Location','Policy Type','Previous Claims','Vehicle Age','Insurance Duration','Policy Start Date'
-                            'Customer Feedback','Smoking Status', 'Exercise Frequency','Property Type']  # same as training
+        expected_columns = ['Age','Age Group', 'Gender', 'Credit Score','CreditScoreGroup', 'Annual Income', 'Marital Status', 'Number of Dependents','Education Level',
+                            'Occupation','Health Score','Location','Policy Type','Previous Claims','Vehicle Age','Insurance Duration',
+                            'Policy Start Date','Customer Feedback','Smoking Status', 'Exercise Frequency','Property Type']  # same as training
         input_data = input_data[expected_columns]
 
 
